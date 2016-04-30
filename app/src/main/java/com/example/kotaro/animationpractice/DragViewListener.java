@@ -16,17 +16,13 @@ import java.util.ArrayList;
  */
 public class DragViewListener implements View.OnTouchListener {
 
-    private TextView textView;
     private MainActivity activity;
     private Button btn;
-    private ArrayList<ImageView> images;
     private int oldx;
     private int oldy;
 
-    public DragViewListener(TextView textView,Button btn,MainActivity activity,ArrayList<ImageView> images){
-        this.textView = textView;
+    public DragViewListener(MainActivity activity,Button btn){
         this.activity = activity;
-        this.images = images;
         this.btn = btn;
     }
 

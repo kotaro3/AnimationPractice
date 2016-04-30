@@ -15,16 +15,10 @@ import java.util.ArrayList;
 
 public class MainActivity extends Activity{
 
-    public void onClickButton(View v) {
-        Intent intent = new Intent(MainActivity.this, MainActivity.class);
-        startActivity(intent);
-    }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_main);
 
         TextView textView = (TextView)findViewById(R.id.dragText);
         Button btn = (Button)findViewById(R.id.btn1);
@@ -48,7 +42,7 @@ public class MainActivity extends Activity{
         image4.startAnimation(anim);
         image5.startAnimation(anim);
 
-        DragViewListener dragListner = new DragViewListener(textView,btn,this,images);
+        DragViewListener dragListner = new DragViewListener(this,btn);
         textView.setOnTouchListener(dragListner);
         image1.setOnTouchListener(dragListner);
         image2.setOnTouchListener(dragListner);
