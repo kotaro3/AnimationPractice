@@ -11,6 +11,47 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_marginTop="100dp"
+        android:layout_width="50dp"
+        android:layout_height="100dp"
+        android:src="@drawable/waito"
+        />
+
+    <ImageView
+        android:id="@+id/image2"
+        android:layout_marginTop="100dp"
+        android:layout_width="50dp"
+        android:layout_height="100dp"
+        android:src="@drawable/waito"
+        />
+
+    <ImageView
+        android:id="@+id/image3"
+        android:layout_marginTop="100dp"
+        android:layout_width="50dp"
+        android:layout_height="100dp"
+        android:src="@drawable/waito"
+        />
+    <ImageView
+        android:id="@+id/image4"
+        android:layout_marginTop="100dp"
+        android:layout_width="50dp"
+        android:layout_height="100dp"
+        android:src="@drawable/waito"
+        />
+    <ImageView
+        android:id="@+id/image5"
+        android:layout_marginTop="100dp"
+        android:layout_width="50dp"
+        android:layout_height="100dp"
+        android:src="@drawable/waito"
+        />
+    </LinearLayout>
     <Button
         android:id="@+id/btn1"
         android:layout_margin="20dp"

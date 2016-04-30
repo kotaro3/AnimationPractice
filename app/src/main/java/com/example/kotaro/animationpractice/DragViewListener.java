@@ -6,7 +6,10 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 /**
  * Created by kotaro on 2016/04/19.
@@ -16,12 +19,14 @@ public class DragViewListener implements View.OnTouchListener {
     private TextView textView;
     private MainActivity activity;
     private Button btn;
+    private ArrayList<ImageView> images;
     private int oldx;
     private int oldy;
 
-    public DragViewListener(TextView textView,Button btn,MainActivity activity){
+    public DragViewListener(TextView textView,Button btn,MainActivity activity,ArrayList<ImageView> images){
         this.textView = textView;
         this.activity = activity;
+        this.images = images;
         this.btn = btn;
     }
 
@@ -38,10 +43,10 @@ public class DragViewListener implements View.OnTouchListener {
         switch (event.getAction()) {
             case MotionEvent.ACTION_MOVE:
                 // 今回イベントでのView移動先の位置
-                int left = textView.getLeft() + (x - oldx);
-                int top = textView.getTop() + (y - oldy);
+                int left = v.getLeft() + (x - oldx);
+                int top = v.getTop() + (y - oldy);
                 // Viewを移動する
-                textView.layout(left, top, left + textView.getWidth(), top + textView.getHeight());
+                v.layout(left, top, left + v.getWidth(), top + v.getHeight());
                 Log.v("TouchEvent","MOVE");
                 break;
             case MotionEvent.ACTION_DOWN:
